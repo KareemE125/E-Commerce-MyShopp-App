@@ -1,11 +1,11 @@
-# my_shop_app
-
-A new Flutter project.
+# E-Commerce MyShopp-App
+100% Flutter App :) .
+E-Commerce App "MyShop App".
+This app is developed using Flutter Framework.
+MyShop App is working in cooperation with Google Firebase (FireBase Authentication & FireBase realtime database).
+Each user can mange his products and orders independently.
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
-
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
