@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:my_shop_app/main.dart';
 import 'package:my_shop_app/screens/my_orders_screen.dart';
-import 'package:my_shop_app/screens/products_overview_screen.dart';
 import 'package:my_shop_app/screens/user_products_screen.dart';
 
 class MyAppDrawer extends StatelessWidget {
@@ -26,7 +25,7 @@ class MyAppDrawer extends StatelessWidget {
             leading: Icon(Icons.logout),
             title: Text('LOGOUT'),
             onTap: (){
-              Navigator.of(context).pushAndRemoveUntil( MaterialPageRoute(builder: (_)=>MyApp()), (route) => true);
+              Navigator.of(context).pushAndRemoveUntil( MaterialPageRoute(builder:(_)=>MyApp()), (route) => true);
               FirebaseAuth.instance.signOut();
             },
           ),

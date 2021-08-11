@@ -22,15 +22,10 @@ class ProductsOverviewScreen extends StatefulWidget {
 class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
   bool _showFavoritesOnly = false;
 
-  @override
-  void initState() {
-    /// "listen" is set to false to be able to run the function in initState()
-    /// as we have ".of(context)" which throws an error
-    /// because when using "context" in initState() it throws an error
-    //Provider.of<Products>(context,listen: false).fetchAndSetProducts();
-    print('init');
-    Provider.of<Orders>(context,listen: false).fetchAndSetOrders();
-    super.initState();
+  Future<void> fetchAndSetData() async
+  {
+    await Provider.of<Products>(context,listen: false).fetchAndSetProducts();
+    await Provider.of<Orders>(context,listen: false).fetchAndSetOrders();
   }
 
   @override
@@ -68,7 +63,7 @@ class _ProductsOverviewScreenState extends State<ProductsOverviewScreen> {
       ),
       drawer: MyAppDrawer(),
       body:FutureBuilder(
-            future: Provider.of<Products>(context,listen: false).fetchAndSetProducts(),
+            future: fetchAndSetData(),
             builder: (ctx,snapShot){
               return snapShot.connectionState == ConnectionState.waiting
                      ? Center(child: CircularProgressIndicator())
