@@ -50,7 +50,7 @@ class AuthScreen extends StatelessWidget {
                     child: Text(
                       'MyShop',
                       style: TextStyle(
-                        color: Theme.of(context).accentTextTheme.title.color,
+                        color: Theme.of(context).accentTextTheme.headline6.color,
                         fontSize: 50,
                         fontFamily: 'Anton',
                         fontWeight: FontWeight.normal,
@@ -145,11 +145,11 @@ class _AuthCardState extends State<AuthCard>
             child: Column(
               children: <Widget>[
                 TextFormField(
-                  decoration: InputDecoration(labelText: 'E-Mail'),
+                  decoration: InputDecoration(labelText: 'E-Mail',),
                   keyboardType: TextInputType.emailAddress,
-                  validator: (value) 
+                  validator:(value)
                   {
-                    if  (value.isEmpty || !value.contains('@') ){ return 'Invalid email!'; }
+                    if( value.isEmpty || !value.contains('@') ){ return 'Invalid email!'; }
                     return null;
                   },
                   onSaved: (value){ _authData['email'] = value; },
@@ -158,9 +158,9 @@ class _AuthCardState extends State<AuthCard>
                   decoration: InputDecoration(labelText: 'Password'),
                   obscureText: true,
                   controller: _passwordController,
-                  validator: (value) 
+                  validator:(value)
                   {
-                    if ( value.isEmpty || value.length < 5 ){ return 'Password is too short!'; }
+                    if( value.isEmpty || value.length < 5 ){ return 'Password is too short!'; }
                     return null;
                   },
                   onSaved: (value){ _authData['password'] = value; },
