@@ -2,8 +2,9 @@
 100% Flutter App :) .
 E-Commerce App "MyShop App".
 This app is developed using Flutter Framework.
-State mangment using Provider.
-MyShop App is working in cooperation with Google Firebase (FireBase Authentication & FireBase realtime database).
+State mangment using Provider package.
+flutter HTTP package to work with apis.
+MyShop App is working in cooperation with Google Firebase Apis (FireBase Authentication & FireBase realtime database).
 Each user can mange his products and orders independently.
 
 ## Getting Started
